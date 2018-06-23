@@ -1,0 +1,137 @@
+<div class="resourceBox" ng-controller="CheatsController">
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a class="breadcrumbtab" href="/home">Home</a></li>
+		<li class="breadcrumb-item active">Cheat Codes</li>
+	</ol>
+	<br>
+	<div class= "LandingP">		
+		<br>
+		<h1>{{heading}}</h1>		
+	    <p class="FirstMsg">{{greeting}}</p>
+	</div>
+	<div id="cheatSteps" ng-controller="CarouselCtrlTwo">
+		<div>
+	        <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+	           	<div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+	            	<img id="carouselImage" style="height: 100%" ng-src="{{slide.image}}">
+	            	<h3>{{slide.text}}</h3>
+	            	<br>
+	            </div>
+	    	</div>
+		</div>
+    </div>
+
+	<br>
+	
+	<div class="panelBox" ng-controller="AccordionDemoCtrl">
+		<script type="text/ng-template" id="group-template.html"></script>
+
+	<uib-accordion close-others="oneAtATime">
+		<div uib-accordion-group heading="Main Cheats">
+			<table class="cheatTable">
+				<tr class="TableHead">
+					<th>
+						<input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchA">
+					</th>
+					<th></th>
+				</tr>
+				<tr class="TableInfo" ng-repeat="item in cheatdata1 | filter : searchA">
+					<td class="NameBox" index="0">{{item.name}}</td>
+					<td><span class="tooltiptext">{{item.game}}</span></td>
+					<td class="ResultBox" index="1">{{item.result}}</td>
+				</tr>
+			</table>
+		</div>
+
+		<div uib-accordion-group heading="Career Cheats">
+			<table class="cheatTable">
+				<tr class="TableHead">			
+					<th>
+						<input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchA">
+					</th>
+				</tr>
+				<tr class="TableInfo" ng-repeat="item in cheatdata2 | filter : searchA">
+					<td class="NameBox" index="0">{{item.name}}</td>
+					<td><span class="tooltiptext">{{item.game}}</span></td>
+					<td class="ResultBox" index="1">{{item.result}}</td>
+				</tr>
+			</table>
+		</div>
+
+		<div uib-accordion-group heading="Skill Cheats">
+			<table class="cheatTable">
+				<tr class="TableHead">
+					<th>
+						<input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchA">
+					</th>
+				</tr>
+				<tr class="TableInfo" ng-repeat="item in cheatdata3 | filter : searchA">
+					<td class="NameBox" index="0">{{item.name}}</td>
+					<td><span class="tooltiptext">{{item.game}}</span></td>
+					<td class="ResultBox" index="1">{{item.result}}</td>
+				</tr>
+			</table>
+		</div>
+
+		<div uib-accordion-group heading="Mood Cheats">
+			<table class="cheatTable">
+				<tr class="TableHead">
+					<th>
+						<input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchA">
+					</th>
+				</tr>
+				<tr class="TableInfo" ng-repeat="item in cheatdata4 | filter : searchA">
+					<td class="NameBox" index="0">{{item.name}}</td>
+					<td><span class="tooltiptext">{{item.game}}</span></td>
+					<td class="ResultBox" index="1">{{item.result}}</td>
+				</tr>
+			</table>
+		</div>
+
+		<div uib-accordion-group heading="Retail Cheats">
+			<table class="cheatTable">
+				<tr class="TableHead">
+					<th>
+						<input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchA">
+					</th>
+				</tr>
+				<tr class="TableInfo" ng-repeat="item in cheatdata5 | filter : searchA">
+					<td class="NameBox" index="0">{{item.name}}</td>
+					<td><span class="tooltiptext">{{item.game}}</span></td>
+					<td class="ResultBox" index="1">{{item.result}}</td>
+				</tr>
+			</table>
+		</div>
+
+		<div uib-accordion-group heading="Restaurant Cheats">
+			<table class="cheatTable">
+				<tr class="TableHead">
+					<th>
+						<input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchA">
+					</th>
+				</tr>
+				<tr class="TableInfo" ng-repeat="item in cheatdata6 | filter : searchA">
+					<td class="NameBox" index="0">{{item.name}}</td>
+					<td><span class="tooltiptext">{{item.game}}</span></td>
+					<td class="ResultBox" index="1">{{item.result}}</td>
+				</tr>
+			</table>
+		</div>
+
+		<div uib-accordion-group heading="Trait Cheats">
+			<table class="cheatTable">
+				<tr class="TableHead">
+					<th>
+						<input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchA">
+					</th>
+				</tr>
+				<tr class="TableInfo" ng-repeat="item in traitdata | filter : searchA">
+					<td class="NameBox" index="0">{{item.name}}</td>
+					<td><span class="tooltiptext">{{item.game}}</span></td>
+					<td class="ResultBox" index="1">{{item.result}}</td>
+				</tr>
+			</table>
+		</div>
+	</uib-accordion>
+	</div>
+</div>

@@ -1,0 +1,25 @@
+<div class="resourceBox" >
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a class="breadcrumbtab" href="/home">Home</a></li>
+		<li class="breadcrumb-item active">Login</li>
+	</ol>
+	<br>
+	<div class= "LandingP">
+		<br>
+        <h1>Log In</h1>
+        <p></p>
+    </div>
+	<div class="formcontainer">
+        <form name="loginForm" ng-submit="submitForm()" novalidate>
+			<div class="form-group">
+				<input type="text" placeholder="Username" name="name" ng-model="user.username" required>
+					<p ng-show="loginForm.name.$pristine" class="help-block">Your username is required</p>
+			</div>
+			<div class="form-group">
+				<input type="password"  placeholder="Password" name="password" ng-model="user.password" required>
+				<p ng-show="loginForm.password.$pristine" class="help-block">Your password is required</p>
+			</div>
+			<button type="submit" class="btn btn-block" ng-disabled="loginForm.$invalid">Submit</button>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,62 @@
+<div ng-controller="PanelController">
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a class="breadcrumbtab" href="/home">Home</a></li>
+		<li class="breadcrumb-item active">Custom Content</li>
+	</ol>
+	<br>
+	<div class= "LandingP">		
+		<br>
+		<h1>{{greeting}}</h1>
+		<p class="FirstMsg">{{heading}}</p>
+	</div>
+	
+	<div id="customContent" ng-controller="CarouselCtrlOne">
+        <div>
+            <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+        		<div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+            		<img id="carouselImage" style="width: 500px height: 300px" ng-src="{{slide.image}}" style="margin:auto;">
+
+				</div>
+        	</div>
+        </div>
+    </div>
+
+	<div class="artistcards">
+		<div class="artistcard">
+			<div class="ArtTitle"><h4>Artists</h4>
+				<p>{{heading2}}</p>
+			</div>
+		
+			<div class="artist" ng-repeat="item in moddata | filter : searchA">
+				<div class="artistPicBox" ><img class="artistPic" ng-src="{{item.image}}" alt="design pic">
+					<a class="Artbtn" href="{{item.artlink}}" target="_blank">Go to Page</a>
+				</div>		
+				<h4 class="artistName">{{item.name}}</h4>
+			</div>	
+		</div>
+		
+		<div class="artistcard">
+			<div class="ArtTitle"><h4>Designs</h4>
+				<p>{{heading2}}</p>
+			</div>
+			<div class="artist" ng-repeat="item in mod2data | filter : searchA">
+				<div class="artistPicBox" ><img class="artistPic" ng-src="{{item.image}}" alt="design pic">
+				<a class="Artbtn" href="{{item.artlink}}" target="_blank">Go to Page</a>
+				</div>		
+				<h4 class="artistName">{{item.name}}</h4>
+			</div>	
+		</div>
+	
+		<div class="artistcard">	
+			<div class="ArtTitle"><h4>Mods</h4>
+				<p>{{heading2}}</p>
+			</div>		
+			<div class="artist" ng-repeat="item in mod3data | filter : searchA">
+				<div class="artistPicBox" ><img class="artistPic" ng-src="{{item.image}}" alt="design pic">
+					<a class="Artbtn" href="{{item.artlink}}" target="_blank">Go to Page</a>
+				</div>		
+				<h4 class="artistName">{{item.name}}</h4>
+			</div>	
+		</div>
+	</div>
+</div>

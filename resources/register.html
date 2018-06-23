@@ -1,0 +1,25 @@
+<div class="resourceBox" ng-controller="RegisterController">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a class="breadcrumbtab" href="/home">Home</a></li>
+        <li class="breadcrumb-item active">Register</li>
+    </ol>  
+    <br>
+    <div class= "LandingP">
+        <br>
+        <h1>Register</h1>
+        <p></p>
+    </div>
+	<div class="formcontainer">           
+        <form name="registrationForm" ng-submit="submitForm()" novalidate>
+            <div class="form-group">
+                <input type="text" placeholder="Username" name="name"  ng-model="user.username" required>
+                    <p ng-show="registrationForm.name.$pristine" class="help-block">Your username is required</p>
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Password" name="password" ng-model="user.password" required>
+                    <p ng-show="registrationForm.password.$pristine" class="help-block">Your password is required</p>
+            </div>
+            <button type="submit" class="btn btn-block" ng-disabled="registrationForm.$invalid">Submit</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,476 @@
+<div class="resourceBox" ng-controller="TableController">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a class="breadcrumbtab" href="/home">Home</a></li>
+        <li class="breadcrumb-item active">Collections</li>
+    </ol>
+    <br>
+    <div class= "LandingP">
+        <br>
+        <h1>Sims 4 Collections</h1>
+        <p class="FirstMsg">{{greeting}}</p>
+    </div>
+        <div class="centercontainer" ng-controller="AccordionDemoCtrl">
+            <script type="text/ng-template" id="group-template.html">
+              
+            </script>
+            <br>
+            
+            <uib-accordion close-others="oneAtATime">
+                <div uib-accordion-group heading="Gardening">
+                    <table class="collectionstable">            
+                            
+                        <tr class=".TableHead">
+                            <th><input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchA"></th>
+                            <th></th>
+                            <th>Rarity</th>
+                            <th>Value</th>
+                            <th>Where to find</th>
+                            <th>Game</th>                       
+                        </tr>
+
+                        <tr class="TableInfo" ng-repeat="item in itemdata | filter : searchA">
+                            <td>{{item.name}}</td> 
+                            <td><img ng-src="{{item.itemimg}}" class="itempic"></td>
+                            <td index="0" class="itemtab">{{item.rarity}}</td>
+                            <td index="1" class="itemtab">§{{item.value}}</td>
+                            <td index="2" class="itemtab">{{item.found}}</td>
+                            <td index="3" class="itemtab">{{item.game}}</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                
+                <div class="expandBtn" uib-accordion-group heading="Fish">
+                    <table class="collectionstable">
+                            <tr class=".TableHead">
+                                <th><input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchB"></th>
+                                <th></th>
+                                <th>Rarity</th>
+                                <th>Value</th>
+                                <th>Where to find</th>  
+                            </tr>               
+
+                            <tr class="TableInfo" ng-repeat="item in fishdata | filter : searchB">
+                                <td>{{item.name}}</td>  
+                                <td><img ng-src="{{item.itemimg}}" class="itempic"></td>
+                                <td index="0" class="itemtab">{{item.rarity}}</td>
+                                <td index="1" class="itemtab">§{{item.value}}</td>
+                                <td index="2" class="itemtab">{{item.found}}</td>
+                            </tr>
+                        </table>
+                </div>
+
+                <div class="expandBtn" uib-accordion-group heading="Crystals">
+                    <table class="collectionstable">
+                            <tr class=".TableHead">
+                                <th><input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchC"></th>
+                                <th></th>
+                                <th>Rarity</th>
+                                <th>Value</th>
+                                <th>Isolated Elements</th>  
+
+                            </tr>               
+
+                            <tr class="TableInfo" ng-repeat="item in crysdata | filter : searchC">
+                                <td>{{item.name}}</td>  
+                                <td><img ng-src="{{item.itemimg}}" class="itempic"></td>
+                                <td index="0" class="itemtab">{{item.rarity}}</td>
+                                <td index="1" class="itemtab">§{{item.value}}</td>
+                                <td index="2" class="itemtab">{{item.found}}</td>
+                            </tr>
+                        </table>
+                </div>
+
+                <div class="expandBtn" uib-accordion-group heading="Insects">
+                    <table class="collectionstable">            
+                            <tr class=".TableHead">
+                                <th><input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchD"></th>
+                                <th></th>
+                                <th>Rarity</th>
+                                <th>Value</th>
+                            </tr>
+
+                            <tr class="TableInfo" ng-repeat="item in bugsdata | filter : searchD">
+                                <td>{{item.name}}</td>
+                                <td><img ng-src="{{item.itemimg}}" class="itempic"></td>
+                                <td index="0" class="itemtab">{{item.rarity}}</td>
+                                <td index="1" class="itemtab">§{{item.value}}</td>
+                            </tr>
+                        </table>
+                </div>
+
+                <div class="expandBtn" uib-accordion-group heading="Metals">
+                    <table class="collectionstable">            
+                            <tr class=".TableHead">
+                                <th><input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchE"></th>
+                                <th></th>
+                                <th>Rarity</th>
+                                <th>Value</th>
+                                <th>Isolated Elements</th>
+                            </tr>
+
+                            <tr class="TableInfo" ng-repeat="item in metaldata | filter : searchE">
+                                <td>{{item.name}}</td>  
+                                <td><img ng-src="{{item.itemimg}}" class="itempic"></td>
+                                <td index="0" class="itemtab">{{item.rarity}}</td>
+                                <td index="1" class="itemtab">§{{item.value}}</td>
+                                <td index="2" class="itemtab">{{item.found}}</td>
+                            </tr>
+                        </table>
+                </div>
+
+                <div class="expandBtn" uib-accordion-group heading="Microscope Prints">
+                    <table class="collectionstable">            
+                            <tr class=".TableHead">
+                                <th><input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchF"></th>
+                                <th></th>
+                                <th>Rarity</th>
+                                <th>Value</th>
+                            </tr>
+                            <tr class="TableInfo" ng-repeat="item in mscopedata | filter : searchF">
+                                <td>{{item.name}}</td>  
+                                <td><img ng-src="{{item.itemimg}}" class="itempic"></td>
+                                <td index="0" class="itemtab">{{item.rarity}}</td>
+                                <td index="1" class="itemtab">§{{item.value}}</td>
+                            </tr>
+                        </table>
+                </div>
+
+                <div class="expandBtn" uib-accordion-group heading="Frogs"><table class="collectionstable">         
+                            <tr class=".TableHead">
+                                <th><input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchG"></th>
+                                <th></th>
+                                <th>Rarity</th>
+                                <th>Value</th>
+                                <th>Elements</th>
+                                <th>Attributes</th>                     
+                            </tr>
+
+                            <tr class="TableInfo" ng-repeat="item in frogdata | filter : searchG">
+                                <td>{{item.name}}</td>  
+                                <td><img ng-src="{{item.itemimg}}" class="itempic"></td>
+                                <td index="0" class="itemtab">{{item.rarity}}</td>
+                                <td index="1" class="itemtab">§{{item.value}}</td>
+                                <td index="2" class="itemtab">{{item.found}}</td>
+                                <td index="3" class="itemtab">{{item.game}}</td>
+                            </tr>
+                        </table></div>
+
+                <div class="expandBtn" uib-accordion-group heading="Elements">
+                    <table class="collectionstable">            
+                            <tr class=".TableHead">
+                                <th><input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchH"></th>
+                                <th></th>
+                                <th>Rarity</th>
+                                <th>Value</th>
+                                <th>Found in (Metals)</th>
+                                <th>Found in (Crystals)</th>                        
+                            </tr>
+
+                            <tr class="TableInfo" ng-repeat="item in elementdata | filter : searchH">
+                                <td>{{item.name}}</td>  
+                                <td><img ng-src="{{item.itemimg}}" class="itempic"></td>
+                                <td index="0" class="itemtab">{{item.rarity}}</td>
+                                <td index="1" class="itemtab">§{{item.value}}</td>
+                                <td index="2" class="itemtab">{{item.found}}</td>
+                                <td index="3" class="itemtab">{{item.game}}</td>
+                            </tr>
+                        </table>
+                </div>
+
+                <div class="expandBtn" uib-accordion-group heading="Postcards">
+                    <table class="collectionstable">            
+                            <tr class=".TableHead">
+                                <th><input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchI"></th>
+                                <th></th>
+                                <th>Rarity</th>
+                                <th>Value</th>                  
+                            </tr>
+
+                            <tr class="TableInfo" ng-repeat="item in postcarddata | filter : searchI">
+                                <td>{{item.name}}</td>  
+                                <td><img ng-src="{{item.itemimg}}" class="itempic"></td>
+                                <td index="0" class="itemtab">{{item.rarity}}</td>
+                                <td index="1" class="itemtab">§{{item.value}}</td>
+                            </tr>
+                        </table>
+                </div>
+
+                <div class="expandBtn" uib-accordion-group heading="Fossils">
+                    <table class="collectionstable">            
+                            <tr class=".TableHead">
+                                <th><input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchJ"></th>
+                                <th></th>
+                                <th>Rarity</th>
+                                <th>Value</th>          
+                            </tr>
+
+                            <tr class="TableInfo" ng-repeat="item in fossildata | filter : searchJ">
+                                <td>{{item.name}}</td>  
+                                <td><img ng-src="{{item.itemimg}}" class="itempic"></td>
+                                <td index="0" class="itemtab">{{item.rarity}}</td>
+                                <td index="1" class="itemtab">§{{item.value}}</td>
+                            </tr>
+                        </table>    
+                </div>
+
+                <div class="expandBtn" uib-accordion-group heading="Feathers">
+                    <table class="collectionstable">            
+                            <tr class=".TableHead">
+                                <th><input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchK"></th>
+                                <th></th>
+                                <th>Rarity</th>
+                                <th>Value</th>
+                                                        
+                            </tr>
+
+                            <tr class="TableInfo" ng-repeat="item in featherdata | filter : searchK">
+                                <td>{{item.name}}</td>  
+                                <td><img ng-src="{{item.itemimg}}" class="itempic"></td>
+                                <td index="0" class="itemtab">{{item.rarity}}</td>
+                                <td index="1" class="itemtab">§{{item.value}}</td>
+                            </tr>
+                        </table>
+                </div>
+
+                <div class="expandBtn" uib-accordion-group heading="Aliens">
+                    <table class="collectionstable">            
+                        <tr class=".TableHead">
+                            <th><input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchL"></th>
+                            <th></th>
+                            <th>Rarity</th>
+                            <th>Value</th>                  
+                        </tr>
+
+                        <tr class="TableInfo" ng-repeat="item in aliendata | filter : searchL">
+                            <td>{{item.name}}</td>  
+                            <td><img ng-src="{{item.itemimg}}" class="itempic"></td>
+                            <td index="0" class="itemtab">{{item.rarity}}</td>
+                            <td index="1" class="itemtab">§{{item.value}}</td>
+                        </tr>
+                    </table>    
+                </div>
+
+                <div class="expandBtn" uib-accordion-group heading="MySims Trophies">
+                    <table class="collectionstable">            
+                        <tr class=".TableHead">
+                            <th><input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchM"></th>
+                            <th></th>
+                            <th>Rarity</th>
+                            <th>Value</th>  
+                        </tr>
+
+                        <tr class="TableInfo" ng-repeat="item in trophdata | filter : searchM">
+                            <td>{{item.name}}</td>  
+                            <td><img ng-src="{{item.itemimg}}" class="itempic"></td>
+                            <td index="0" class="itemtab">{{item.rarity}}</td>
+                            <td index="1" class="itemtab">§{{item.value}}</td>
+                        </tr>
+                    </table>    
+                </div>
+
+                <div class="expandBtn" uib-accordion-group heading="Space Prints">
+                    <table class="collectionstable">            
+                        <tr class=".TableHead">
+                            <th><input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchN"></th>
+                            <th></th>
+                            <th>Rarity</th>
+                            <th>Value</th>
+                        </tr>
+
+                        <tr class="TableInfo" ng-repeat="item in spcprintdata | filter : searchN">
+                            <td>{{item.name}}</td>  
+                            <td><img ng-src="{{item.itemimg}}" class="itempic"></td>
+                            <td index="0" class="itemtab">{{item.rarity}}</td>
+                            <td index="1" class="itemtab">§{{item.value}}</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="expandBtn" uib-accordion-group heading="Space Rocks">
+                    <table class="collectionstable">            
+                        <tr class=".TableHead">
+                            <th><input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchO"></th>
+                            <th></th>
+                            <th>Rarity</th>                      
+                        </tr>
+
+                        <tr class="TableInfo" ng-repeat="item in spcrockdata | filter : searchO">
+                            <td>{{item.name}}</td>  
+                            <td><img ng-src="{{item.itemimg}}" class="itempic"></td>
+                            <td index="0" class="itemtab">{{item.rarity}}</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="expandBtn" uib-accordion-group heading="City Posters">
+                    <table class="collectionstable">            
+                            <tr class=".TableHead">
+                                <th><input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchP"></th>
+                                <th></th>
+                                <th>Rarity</th>
+                                <th>Value</th>    
+                            </tr>
+
+                            <tr class="TableInfo" ng-repeat="item in posterdata | filter : searchP">
+                                <td>{{item.name}}</td>  
+                                <td><img ng-src="{{item.itemimg}}" class="itempic"></td>
+                                <td index="0" class="itemtab">{{item.rarity}}</td>
+                                <td index="1" class="itemtab">§{{item.value}}</td>
+                            </tr>
+                        </table>
+                </div>
+
+                <div class="expandBtn" uib-accordion-group heading="Snow Globes">
+                    <table class="collectionstable">            
+                            <tr class=".TableHead">
+                                <th><input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchQ"></th>
+                                <th></th>
+                                <th>Rarity</th>
+                                <th>Value</th>
+                                                    
+                            </tr>
+
+                            <tr class="TableInfo" ng-repeat="item in globedata | filter : searchQ">
+                                <td>{{item.name}}</td>  
+                                <td><img ng-src="{{item.itemimg}}" class="itempic"></td>
+                                <td index="0" class="itemtab">{{item.rarity}}</td>
+                                <td index="1" class="itemtab">§{{item.value}}</td>
+                            </tr>
+                        </table>    
+                </div>
+
+                <div class="expandBtn" uib-accordion-group heading="Sugar Skulls (Day of the Dead Challenge)">
+                    <table class="collectionstable">            
+                            <tr class=".TableHead">
+                                <th><input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchR"></th>
+                                <th></th>
+                                <th>Rarity</th>
+                                <th>Value</th>
+                                                    
+                            </tr>
+
+                            <tr class="TableInfo" ng-repeat="item in skulldata | filter : searchR">
+                                <td>{{item.name}}</td>
+                                <td><img ng-src="{{item.itemimg}}" class="itempic"></td>
+                                <td index="0" class="itemtab">{{item.rarity}}</td>
+                                <td index="1" class="itemtab">§{{item.value}}</td>
+                            </tr>
+                        </table>
+                </div>
+
+                <div class="expandBtn" uib-accordion-group heading="Geodes">
+                    <table class="collectionstable">            
+                        <tr class=".TableHead">
+                            <th><input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchR"></th>
+                            <th></th>
+                            <th>Rarity</th>
+                            <th>Value</th>
+                                        
+                        </tr>
+
+                        <tr class="TableInfo" ng-repeat="item in geodedata | filter : searchR">
+                            <td>{{item.name}}</td>
+                            <td><img ng-src="{{item.itemimg}}" class="itempic"></td>
+                            <td index="0" class="itemtab">{{item.rarity}}</td>
+                            <td index="1" class="itemtab">§{{item.value}}</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="expandBtn" uib-accordion-group heading="Magic Beans (PlantSim Challenge)">
+                    <table class="collectionstable">            
+                        <tr class=".TableHead">
+                            <th><input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchR"></th>
+                            <th></th>
+                            <th>Rarity</th>
+                            <th>Value</th>
+                                                
+                        </tr>
+
+                        <tr class="TableInfo" ng-repeat="item in beandata | filter : searchR">
+                            <td>{{item.name}}</td>
+                            <td><img ng-src="{{item.itemimg}}" class="itempic"></td>
+                            <td index="0" class="itemtab">{{item.rarity}}</td>
+                            <td index="1" class="itemtab">§{{item.value}}</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="expandBtn" uib-accordion-group heading="Experimental Food Photos">
+                    <table class="collectionstable">            
+                        <tr class=".TableHead">
+                            <th><input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchR"></th>
+                            <th></th>
+                            <th>Rarity</th>
+                            <th>Value</th>
+                                                
+                        </tr>
+
+                        <tr class="TableInfo" ng-repeat="item in exfooddata | filter : searchR">
+                            <td>{{item.name}}</td>
+                            <td><img ng-src="{{item.itemimg}}" class="itempic"></td>
+                            <td index="0" class="itemtab">{{item.rarity}}</td>
+                            <td index="1" class="itemtab">§{{item.value}}</td>
+                        </tr>
+                    </table>    
+                </div>
+
+                <div class="expandBtn" uib-accordion-group heading="Voidcritters">
+                    <table class="collectionstable">            
+                        <tr class=".TableHead">
+                            <th><input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchR"></th>
+                            <th></th>
+                            <th>Rarity</th>
+                            <th>Value</th>
+                                                    
+                        </tr>
+
+                        <tr class="TableInfo" ng-repeat="item in voiddata | filter : searchR">
+                            <td>{{item.name}}</td>
+                            <td><img ng-src="{{item.itemimg}}" class="itempic"></td>
+                            <td index="0" class="itemtab">{{item.rarity}}</td>
+                            <td index="1" class="itemtab">§{{item.value}}</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="expandBtn" uib-accordion-group heading="Holiday Cracker Plushies">
+                    <table class="collectionstable">            
+                        <tr class=".TableHead">
+                            <th><input placeholder="Search..." type="text" name="" class="collectionsform" ng-model="searchR"></th>
+                            <th></th>
+                            <th>Rarity</th>
+                            <th>Value</th>
+                                            
+                        </tr>
+
+                        <tr class="TableInfo" ng-repeat="item in crackerdata | filter : searchR">
+                            <td>{{item.name}}</td>
+                            <td><img ng-src="{{item.itemimg}}" class="itempic"></td>
+                            <td index="0" class="itemtab">{{item.rarity}}</td>
+                            <td index="1" class="itemtab">§{{item.value}}</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="expandBtn" uib-accordion-group heading="Decorative Eggs">
+                    <div class="eggHeading">            
+                            
+                        <div class="eggData" ng-repeat="item in eggdata | filter : searchR">
+                            <img ng-src="{{item.itemimg}}" class="eggPic">
+                        </div>
+                    </div>
+                </div>
+
+            </uib-accordion>
+
+        </div>
+    </div>
+</div>
+
+
+
+    
+
+    
